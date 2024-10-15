@@ -2,9 +2,108 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
+
+body {
+    background-color: #00051a;
+}
+
+main {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+}
+
+.herbarium {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin-left: 20px;
+}
+
+.blade {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.5s ease, left 0.5s ease, z-index 0.5s ease;
+    left: 0;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.blade:nth-child(1) {
+    top: 0%; 
+    z-index: 1;
+}
+
+.blade:nth-child(2) {
+    top: 25%; 
+    z-index: 2;
+}
+
+.blade:nth-child(3) {
+    top: 50%; 
+    z-index: 3;
+}
+
+/* Når et billede er klikket på (taget med id) */
+:target {
+    transform: translateX(300px);
+    z-index: 10;
+}
+
+/* Behold z-index for andre billeder */
+#blad1:target ~ .blade:nth-child(2), #blad2:target ~ .blade:nth-child(2) {
+    z-index: 2;
+}
+
+#blad1:target ~ .blade:nth-child(3), #blad2:target ~ .blade:nth-child(3), #blad3:target ~ .blade:nth-child(3) {
+    z-index: 3;
+}
+
+
+
+
+
+
+ 
+
+/*.herbarium .blade{
    
-/* Gør videoen fullscreen */
+    transform: scale(1, 1);
+    filter:blur(5px);
+    object-fit: cover;
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    z-index: 1;
+    
+}
+
+.herbarium .blade:hover{
+    filter:blur(0px);
+    transform: scale(2, 2);
+    z-index: 10;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Gør videoen fullscreen 
 #video-overlay {
     position: fixed;
     top: 0;
@@ -12,22 +111,20 @@
     width: 100%;
     height: 100%;
     background-color:#00082b;
-    z-index: 9999; /* Sørg for, at videoen er øverst */
-    animation: fadeOut 2s ease forwards; /* Fade out after 5 seconds */
-    animation-delay: 2s; /* Delay the fade-out for 10 seconds */
+    z-index: 9999; /* Sørg for, at videoen er øverst 
+    animation: fadeOut 2s ease forwards; /* Fade out after 5 seconds 
+    animation-delay: 2s; /* Delay the fade-out for 10 seconds 
 }
 
 #intro-video {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Sørger for at videoen fylder hele skærmen */
+    object-fit: cover; /* Sørger for at videoen fylder hele skærmen 
 }
 
-body{
-    
-}
 
-/* Initially hide the content using opacity and visibility */
+
+/* Initially hide the content using opacity and visibility 
 #content {
     opacity: 0;
     visibility: hidden;
@@ -43,10 +140,10 @@ body{
     background-size: cover;
     
     z-index: 1;
-    transition: opacity 2s ease, visibility 0s linear 12s; /* Transition delay matches total time */
+    transition: opacity 2s ease, visibility 0s linear 12s; /* Transition delay matches total time 
 }
 
-/* Fade out animation for video overlay */
+/* Fade out animation for video overlay 
 @keyframes fadeOut {
     to {
         opacity: 0;
@@ -54,11 +151,11 @@ body{
     }
 }
 
-/* Make the content visible after the video overlay fades out */
+/* Make the content visible after the video overlay fades out 
 #video-overlay + #content {
     opacity: 1;
     visibility: visible;
-    transition-delay: 12s; /* Delay showing the content for 12 seconds */
+    transition-delay: 12s; /* Delay showing the content for 12 seconds 
 }
 
 

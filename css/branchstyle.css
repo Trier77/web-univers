@@ -62,11 +62,11 @@ body{
     cursor: pointer;
 }
 
-.branch-images .digital{
+.branch-images .digi-kunst{
 
 }
 
-.branch-images .digital img{
+.branch-images .digi-kunst img{
     position: absolute;
     object-fit: cover;
     height: 50vh;
@@ -75,7 +75,7 @@ body{
     left: 50%;
 }
 
-.branch-images .digital .passive:hover{
+.branch-images .digi-kunst .passive:hover{
     opacity: 0;
     cursor: pointer;
 }
