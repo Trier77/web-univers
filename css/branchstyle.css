@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body{
+    background-color:#00051a;
+    color:#fff;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    
+    background-image: url(..//img/branch.png);
+    background-size: 120vh;
+    background-position: center;
+    
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.branch-images{
+    
+}
+
+.branch-images .vid-graf{
+    
+    
+}
+
+.branch-images .vid-graf img{
+    position: absolute;
+    object-fit: cover;
+    height: 50vh;
+    width: 50vh;
+    top: 20%;
+    left: 30%;
+}
+
+.branch-images .vid-graf .passive:hover{
+    opacity: 0;
+    cursor: pointer;
+}
+
+.branch-images .foto-graf{
+
+}
+
+.branch-images .foto-graf img{
+    position: absolute;
+    object-fit: cover;
+    height: 50vh;
+    width: 50vh;
+    top: 60%;
+    left: 40%;
+}
+
+.branch-images .foto-graf .passive:hover{
+    opacity: 0;
+    cursor: pointer;
+}
+
+.branch-images .digital{
+
+}
+
+.branch-images .digital img{
+    position: absolute;
+    object-fit: cover;
+    height: 50vh;
+    width: 50vh;
+    top: 50%;
+    left: 50%;
+}
+
+.branch-images .digital .passive:hover{
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+
+
+
+
+/*.branch-images .active {
+    opacity: 0;   Hide the active image by default
+}
+
+.branch-images:hover .active {
+    opacity: 1;  /* Show the active image on hover 
+}*
+
+.branch-images:hover .passsive {
+    opacity: 0;   Hide the passive image on hover 
+}*/

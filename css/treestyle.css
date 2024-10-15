@@ -12,7 +12,7 @@ body{
     
     
     background-image: url(..//img/tree-no-bg.png);
-    background-size: 120vh;
+    background-size: 100vh;
     background-position: center;
     
     background-repeat: no-repeat;
@@ -28,22 +28,33 @@ h1{
 }
 
 .skill-tree-images{
+    position: absolute;
     
+    width: 50vw;   /* 60% of the parent's width */
+    height: 50vh;
+    
+     
     
 }
 
-.skill-tree-images .pas-act img{
+.skill-tree-images .bil-vid{
+     /* Adjust positioning */
+     top: 44%;    /* Adjusts the element's vertical position (50% from top of viewport) */
+     left: 66%;   /* Adjusts the element's horizontal position (50% from left of viewport) */
+     transform: translate(-50%, -50%); /* Centers the element both horizontally and vertically */
+}
+
+.skill-tree-images .bil-vid img{
     position: absolute;
     object-fit: cover;
-    width: 50%;   /* 60% of the parent's width */
-    height: auto;
     clip-path: inset(36% 36% 36% 36%); /* Cropping using percentages (top, right, bottom, left) */
     border-radius: 50%;
+  
 }
 
 
 
-.skill-tree-images .pas-act #passive:hover{
+.skill-tree-images .bil-vid .passive:hover{
     opacity: 0;
     cursor: pointer;
     

@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+   
+/* Gør videoen fullscreen */
+#video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#00082b;
+    z-index: 9999; /* Sørg for, at videoen er øverst */
+    animation: fadeOut 2s ease forwards; /* Fade out after 5 seconds */
+    animation-delay: 2s; /* Delay the fade-out for 10 seconds */
+}
+
+#intro-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Sørger for at videoen fylder hele skærmen */
+}
+
+body{
+    
+}
+
+/* Initially hide the content using opacity and visibility */
+#content {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position:relative;
+    background-color:#00082b;
+    background-image:url(../img/branch.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    z-index: 1;
+    transition: opacity 2s ease, visibility 0s linear 12s; /* Transition delay matches total time */
+}
+
+/* Fade out animation for video overlay */
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* Make the content visible after the video overlay fades out */
+#video-overlay + #content {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 12s; /* Delay showing the content for 12 seconds */
+}
+
+
