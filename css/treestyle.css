@@ -27,35 +27,78 @@ h1{
     
 }
 
-.skill-tree-images{
+.skill-tree-images img{
     position: absolute;
     
-    width: 50vw;   /* 60% of the parent's width */
+    width: 50vh;   /* 60% of the parent's width */
     height: 50vh;
+    object-fit: contain; /* Sørger for at billedet holder sit forhold */
+    max-width: 100%; /* Billeder skal ikke overskride containerens bredde */
+    height: auto; /* Behold billedets aspektforhold */
+    transition: opacity 0.3s ease; /* Blød overgang for hover-effekten */
     
      
     
 }
 
-.skill-tree-images .bil-vid{
-     /* Adjust positioning */
-     top: 44%;    /* Adjusts the element's vertical position (50% from top of viewport) */
-     left: 66%;   /* Adjusts the element's horizontal position (50% from left of viewport) */
-     transform: translate(-50%, -50%); /* Centers the element both horizontally and vertically */
+
+/* Specifik placering af billeder */
+.skill-tree-images .bil-vid img {
+    width: 20%; /* Dynamisk bredde baseret på containerens bredde */
+    top: 22%; /* Justér placering i forhold til baggrunden */
+    left: 33%;
+    clip-path: inset(36% 36% 36% 36%); /* Cropping using percentages (top, right, bottom, left) */
+   border-radius: 50%;
+}
+
+.skill-tree-images .musik img {
+    width: 20%; /* Dynamisk bredde baseret på containerens bredde */
+    top: 40%;
+    left: 41%;
+    clip-path: inset(36% 36% 36% 36%); /* Cropping using percentages (top, right, bottom, left) */
+   border-radius: 50%;
+}
+
+.skill-tree-images .tegn-male img {
+    width: 20%; /* Dynamisk bredde baseret på containerens bredde */
+    top: 21%;
+    left: 46%;
+    clip-path: inset(36% 36% 36% 36%); /* Cropping using percentages (top, right, bottom, left) */
+   border-radius: 50%;
+}
+
+.skill-tree-images .norkling img {
+    width: 20%; /* Dynamisk bredde baseret på containerens bredde */
+    top: 31%;
+    left: 46%;
+    clip-path: inset(36% 36% 36% 36%); /* Cropping using percentages (top, right, bottom, left) */
+   border-radius: 50%;
+}
+
+/* Hover-effekt for billeder */
+.skill-tree-images .passive:hover {
+    opacity: 0; /* Skjuler det passive billede */
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/*.skill-tree-images .bil-vid{
+    /* Adjust positioning 
+    top: 44%;    /* Adjusts the element's vertical position (50% from top of viewport) 
+    left: 66%;   /* Adjusts the element's horizontal position (50% from left of viewport) 
+    transform: translate(-50%, -50%); /* Centers the element both horizontally and vertically 
 }
 
 .skill-tree-images .bil-vid img{
-    position: absolute;
-    object-fit: cover;
-    clip-path: inset(36% 36% 36% 36%); /* Cropping using percentages (top, right, bottom, left) */
-    border-radius: 50%;
-  
-}
-
-
-
-.skill-tree-images .bil-vid .passive:hover{
-    opacity: 0;
-    cursor: pointer;
-    
+   position: absolute;
+   object-fit: cover;
+   clip-path: inset(36% 36% 36% 36%); /* Cropping using percentages (top, right, bottom, left) 
+   border-radius: 50%;
+ 
 }

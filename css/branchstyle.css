@@ -13,10 +13,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    background-image: url('../img/branch.png');
-    background-size: 100%; /* Baggrundsbilledet skal holde sit forhold */
-    background-position: center 30%; /* Centrer baggrunden */
-    background-repeat: no-repeat;
+    
 }
 
 h1 {
@@ -33,9 +30,14 @@ h1 {
     width: 100vw; /* Halv bredde af viewport */
     height: 100vh; /* Halv højde af viewport */
     
-    display: flex; /* Tilføj flex for centreret layout */
-    justify-content: center;
-    align-items: center;
+    background-image: url('../img/branch.png');
+    background-size: 70%; /* Baggrundsbilledet skal holde sit forhold */
+    background-position: center 30%; /* Centrer baggrunden */
+    background-repeat: no-repeat;
+    
+}
+.bg{
+    
 }
 
 .img-rest .branch-images {
@@ -56,20 +58,26 @@ h1 {
 /* Specifik placering af billeder */
 .branch-images .vid-graf img {
     width: 20%; /* Dynamisk bredde baseret på containerens bredde */
-    top: 10%; /* Justér placering i forhold til baggrunden */
-    left: 15%;
+    top: 22%; /* Justér placering i forhold til baggrunden */
+    left: 33%;
+    clip-path: inset(36% 36% 36% 36%); /* Cropping using percentages (top, right, bottom, left) */
+   border-radius: 50%;
 }
 
 .branch-images .foto-graf img {
     width: 20%; /* Dynamisk bredde baseret på containerens bredde */
-    top: 60%;
-    left: 30%;
+    top: 40%;
+    left: 41%;
+    clip-path: inset(36% 36% 36% 36%); /* Cropping using percentages (top, right, bottom, left) */
+   border-radius: 50%;
 }
 
 .branch-images .digi-kunst img {
     width: 20%; /* Dynamisk bredde baseret på containerens bredde */
-    top: 30%;
-    left: 70%;
+    top: 21%;
+    left: 46%;
+    clip-path: inset(36% 36% 36% 36%); /* Cropping using percentages (top, right, bottom, left) */
+   border-radius: 50%;
 }
 
 /* Hover-effekt for billeder */
