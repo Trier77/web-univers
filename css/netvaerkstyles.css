@@ -1,17 +1,18 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    height: 100%;
 }
 
-body{
-    background-color:#00082b;
-    color:#fff;
+body {
+    background-color: #00051a;
+    background-image: url(/img/roots.png);
     
     
     
-    background-image: url(..//img/tree-no-bg.png);
+    
+    
+    
     background-size: 100vh;
     background-position: center;
     
@@ -21,7 +22,6 @@ body{
     align-items: center;
     
 }
-
 nav{
     padding: 1.25rem; /* 20px -> 1.25rem */
 }
@@ -118,7 +118,9 @@ ul.menu {
     max-width: calc(100vw - 1.25rem); /* Undgå at menuer går uden for visningsområdet */
 }
 
-.skill-tree-images img{
+    
+
+.root-images img{
     position: absolute;
     
     width: 50vh;   /* 60% of the parent's width */
@@ -134,7 +136,7 @@ ul.menu {
 
 
 /* Specifik placering af billeder */
-.skill-tree-images .bil-vid img {
+.root-images .spoergsmaal img {
     width: 20%; /* Dynamisk bredde baseret på containerens bredde */
     top: 22%; /* Justér placering i forhold til baggrunden */
     left: 33%;
@@ -142,7 +144,7 @@ ul.menu {
    border-radius: 50%;
 }
 
-.skill-tree-images .musik img {
+.root-images .chat img {
     width: 20%; /* Dynamisk bredde baseret på containerens bredde */
     top: 40%;
     left: 41%;
@@ -150,32 +152,16 @@ ul.menu {
    border-radius: 50%;
 }
 
-.skill-tree-images .tegn-male img {
-    width: 20%; /* Dynamisk bredde baseret på containerens bredde */
-    top: 21%;
-    left: 46%;
-    clip-path: inset(36% 36% 36% 36%); /* Cropping using percentages (top, right, bottom, left) */
-   border-radius: 50%;
-}
 
-.skill-tree-images .norkling img {
-    width: 20%; /* Dynamisk bredde baseret på containerens bredde */
-    top: 31%;
-    left: 46%;
-    clip-path: inset(36% 36% 36% 36%); /* Cropping using percentages (top, right, bottom, left) */
-   border-radius: 50%;
-}
 
 /* Hover-effekt for billeder */
-.skill-tree-images .passive:hover {
+.root-images .passive:hover {
     opacity: 0; /* Skjuler det passive billede */
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
+.root-images .ikoner{
+    width: 5rem;
+    height: 5rem;
+    top: 30rem;
+}
